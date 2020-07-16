@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="card-img-overlay text-right">
-                <a class="btn btn-primary" href="edit/{{ $user->name }}" role="button">Edit</a>
+                <a class="btn btn-primary" href="edit" role="button">Edit</a>
             </div>
         </div>
     </div>

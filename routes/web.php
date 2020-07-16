@@ -25,6 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('profile', 'UserViewController@index')->middleware('auth');
 
-Route::get('edit/{username}','UserUpdateController@show');
+Route::get('edit','UserUpdateController@show');
 
-Route::post('edit/{username}','UserUpdateController@edit');
+Route::post('edit/{id}','UserUpdateController@edit');
