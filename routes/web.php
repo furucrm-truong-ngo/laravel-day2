@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile', function (){
-    return view('profile');
-})->middleware('auth');
+Route::get('profile', 'UserViewController@index')->middleware('auth');
+
+Route::get('edit/{username}','UserUpdateController@show');
+
+Route::post('edit/{username}','UserUpdateController@edit');
